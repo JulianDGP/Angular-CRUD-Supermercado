@@ -1,0 +1,25 @@
+<form action="">
+    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="NombreinputText" [(ngModel)]="Elnombre" name="input1" >
+
+    <label for="exampleInputEmail1" class="form-label">Marca</label>
+    <select class="form-select" name="a" id="xd"  [(ngModel)]="Lamarca" name="input2">
+        <option *ngFor="let proovedor of proovedores; let i=index"> {{proovedor.marca}}</option>
+    </select>
+
+    <label for="exampleInputEmail1" class="form-label">Precio Unitario</label>
+    <input type="text" class="form-control" id="PrecioUinputText" [(ngModel)]="Elpu" name="input3">
+
+    <label for="exampleInputEmail1" class="form-label">Unidad de Medida</label>
+    <select class="form-select" name="a" id="xd"  [(ngModel)]="Elpum" name="input3">
+        <option *ngFor="let pum of pums; let i=index"> {{pum.unidad}}</option>
+    </select>  
+
+    <label for="exampleInputEmail1" class="form-label">Stock</label>
+    <input type="text" class="form-control" id="StockinputText" [(ngModel)]="ElStock" name="input4" >
+
+</form>
+
+<button type="button" class="btn btn-dark" (click)="saveNew()">crear</button>
+
+
